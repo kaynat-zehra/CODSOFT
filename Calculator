@@ -23,4 +23,4 @@ elif (operation == '/' or operation == "division"):
 elif (operation == '%' or operation == "remainder"):
     result = num1%num2
 
-print("The result of th desired operations is: ", num1,operation, num2, "=", result)
+print("The result of the desired operation is: ", num1,operation, num2, "=", result)
