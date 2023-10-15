@@ -1,0 +1,26 @@
+#Simple Calculator
+#Design a simple calculator with basic arithmetic operations. Prompt the user to input two numbers and an operation choice. Perform the calculation and display the result.
+
+num1 = input("Please Enter the First number: ")
+num2 = input("Please enter the Second number: ")
+print('     operation       |       operator        ')
+print('     addition        |          +        ')
+print('   subtraction       |          -        ')
+print('   multipication     |          *        ')
+print('     division        |          /        ')
+print('     remainder       |          %        ')
+print()
+operation = input("Please enter the operation to be performed: ")
+
+if (operation == '+' or operation == "addition"):
+    result = num1+num2
+elif (operation == '-' or operation == "subtraction"):
+    result = num1-num2
+elif (operation == '*' or operation == "multiplication"):
+    result = num1*num2
+elif (operation == '/' or operation == "division"):
+    result = num1/num2
+elif (operation == '%' or operation == "remainder"):
+    result = num1%num2
+
+print("The result of th desired operations is: ", num1,operation, num2, "=", result)
