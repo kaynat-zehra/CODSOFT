@@ -1,0 +1,64 @@
+#Rock paper scissors game
+import random
+
+print ("        Welcome to Rock, Papers, Scissors game       \n")
+print ("For selecting Rock :            Enter R")
+print ("For selecting Paper :           Enter P")
+print ("For selecting Scissors :        Enter S\n")
+print("For ending the game:             Enter 0\n")
+score_user = 0 #user's score
+score_comp = 0 #computer's score
+user = ''
+while (user != '0'):
+    user = input("Please select Rock, Paper or Scissors ")
+    print()
+    user1 = user.lower()
+    if user1 not in ('r', 'p', 's'):
+        print("Invalid entry, Try Again")
+        break
+    comp = random.randint(1,3)
+    # 1 -> Rock
+    # 2 -> Paper
+    # 3 -> Scissors
+    if comp == 1:
+        select = 'R'
+        if user1 in ['r', 'rock']:
+            pass
+        elif user1 in ['p', 'paper']:
+            score_user += 1
+            print("Congrats! You won this round")
+        elif user1 in ['s', 'scissors']:
+            score_comp += 1
+
+    elif comp == 2:
+        select = 'P'
+        if user1 in ['r', 'rock']:
+            score_comp += 1
+        elif user1 in ['p', 'paper']:
+            pass
+        elif user1 in ['s', 'scissors']:
+            score_user += 1
+            print("Congrats! You won this round")
+
+    elif comp == 3:
+        select = "S"
+        if user1 in ['r', 'rock']:
+            score_user += 1
+            print("Congrats! You won this round")
+        elif user1 in ['p', 'paper']:
+            score_comp +=1
+        elif user1 in ['s', 'scissors']:
+            pass
+
+    print("Your select:", user.upper() , "  Computer's select:", select,)
+    print("Current Scores:")
+    print("Your score: ", score_user)
+    print("Computer's Score", score_comp, '\n')
+
+if user1 in ('r', 'p', 's'):
+    if score_user > score_comp:
+        print("Congratulations! You Win")
+    elif score_user == score_comp:
+        print("Match Draw")
+    else:
+        print("You Lost")
